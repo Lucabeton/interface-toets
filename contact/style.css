@@ -1,0 +1,140 @@
+/* Apply the gradient background to the entire body */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+  height: 100%;
+}
+
+/* De zwarte balk bovenaan */
+.top-bar {
+  position: fixed; /* Zorgt ervoor dat de balk bovenaan blijft staan */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Pas de hoogte aan zoals gewenst */
+  background-color: black;
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Horizontally center the buttons */
+  align-items: center; /* Vertically center the buttons */
+  z-index: 2; /* Zorgt ervoor dat de balk boven de andere content staat */
+}
+
+/* Style for the buttons inside the top bar */
+.top-button {
+  background-color: #D32F2F; /* Red color for buttons */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding */
+  margin: 0 10px; /* Space between buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Change button color on hover */
+.top-button:hover {
+  background-color: #8B0000; /* Darker red when hovering */
+}
+
+/* De zwarte balk onderaan */
+.bottom-bar {
+  position: fixed; /* Zorgt ervoor dat de balk onderaan blijft staan */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Pas de hoogte aan zoals gewenst */
+  background-color: black;
+  z-index: 2; /* Zorgt ervoor dat de balk boven de andere content staat */
+}
+
+/* Gradient background updated to #623b8f and #4e69ac (no white) */
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, 
+                              #623b8f,      /* Dark purple at the top-left */
+                              #4e69ac);     /* Lighter blue at the bottom-right */
+  z-index: -1; /* Zorgt ervoor dat de achtergrond achter de balken en content komt */
+}
+
+/* Flex container to position the image and form next to each other */
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Space between image and form */
+  align-items: center; /* Vertically center the image and form */
+  margin-top: 150px; /* Space from the top bar */
+  padding: 0 20px;
+}
+
+/* Image styling */
+.centered-image {
+  width: 30%; /* Make the image smaller by setting the width to 30% */
+  height: auto; /* Let the height adjust automatically */
+  object-fit: contain; /* Ensure the aspect ratio is preserved */
+  margin-right: 20px; /* Space between the image and form */
+}
+
+/* Form container styling */
+.form-container {
+  width: 60%; /* Set the form to take up 60% of the available space */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Form header */
+.form-container h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Input fields styling */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Textarea for address field */
+form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Submit button */
+.submit-button {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.submit-button:hover {
+  background-color: #8B0000;
+}

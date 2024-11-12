@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Red to White Gradient</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Bovenste zwarte balk met knoppen -->
+  <div class="top-bar">
+    <a href="/homepage/index.html"><button class="top-button">Home</button></a>
+    <a href="/tourdata/index.html"><button class="top-button">Tourdata</button></a>
+    <a href="/contact/index.html"><button class="top-button">Contact</button></a>
+  </div>
+
+  <!-- Main container for image and form -->
+  <div class="main-container">
+    <!-- De afbeelding, gecentreerd -->
+    <img class="centered-image" src="/images/Screenshot 2024-11-12 at 8.53.31 AM.png" alt="albumcover">
+    
+    <!-- De form container -->
+    <div class="form-container">
+      <h2>Contact Form</h2>
+      <form action="https://sd-lab.nl/INTERFACE1/index.php" method="post">
+        <label for="Voornaam">Voornaam:</label>
+        <input type="text" id="Voornaam" name="Voornaam" required>
+
+        <label for="Achternaam">Achternaam:</label>
+        <input type="text" id="Achternaam" name="Achternaam" required>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required>
+
+        <label for="Telefoon-nummer">Telefoon nummer:</label>
+        <input type="tel" id="Telefoon-nummer" name="Telefoon-nummer" pattern="[0-9]{10}" required placeholder="123-456-7890">
+
+        <label for="Bericht">Bericht:</label>
+        <textarea id="Bericht" name="Bericht" rows="4" required></textarea>
+
+        <button type="submit" class="submit-button">Versturen</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- De zwarte balk onderaan -->
+  <div class="bottom-bar"></div>
+
+  <!-- De gradient achtergrond -->
+  <div class="gradient-background"></div>
+</body>
+</html>
